@@ -5,6 +5,7 @@ const validator = (schema) => (payload) =>
 
 //   create a Joi schema
 const signupSchema = Joi.object({
+  
   /**
    * string(): field should be a string
    * email(): field should be a valid email
@@ -20,8 +21,8 @@ const signupSchema = Joi.object({
    * items(): field array items should be of a specific types
    * valid(): the only valid values of the field
    * truthy(): if the field is equal to the value then resolve to true // hintful values
-   *
    */
+  
   email: Joi.string().email().required(),
 
   password: Joi.string().min(3).max(10).required(),
